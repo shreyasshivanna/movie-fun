@@ -18,20 +18,26 @@ package org.superbiz.moviefun.albums;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import sun.rmi.runtime.Log;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Repository
 public class AlbumsBean {
+    private static final Logger LOGGER = Logger.getLogger( AlbumsBean.class.getName() );
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Transactional
     public void addAlbum(Album album) {
+
+        LOGGER.log(Level.FINE, "*****************addAlnum************");
         entityManager.persist(album);
     }
 

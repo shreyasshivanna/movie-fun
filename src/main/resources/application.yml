@@ -1,7 +1,8 @@
 spring:
   jpa:
     generate-ddl: true
-    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties.hibernate.dialect.storage-engine: innodb
   datasource:
     url: jdbc:mysql://localhost:3306/movies?useSSL=false
     username: root
