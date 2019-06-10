@@ -16,6 +16,8 @@
  */
 package org.superbiz.moviefun.albums;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
